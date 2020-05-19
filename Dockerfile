@@ -3,7 +3,6 @@ WORKDIR /var/www
 COPY ./ ./
 RUN apk update
 RUN apk add yarn
-ENV LIBRARY_PATH=/lib:/usr/lib
 RUN cd packages/landing && yarn install
 CMD ["yarn", "next-dev"]
 EXPOSE 3000

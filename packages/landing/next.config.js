@@ -23,5 +23,20 @@ module.exports = withPlugins(
   ],
   {
     distDir: '../../dist/functions/next',
+    webpack(config, { dev }) {
+      config.module.rules.push({
+        test: /\.(eot|woff|woff2|ttf)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000,
+            name: '[name].[ext]',
+          },
+        },
+      });
+
+      return config;
+    },
+    
   }
 );

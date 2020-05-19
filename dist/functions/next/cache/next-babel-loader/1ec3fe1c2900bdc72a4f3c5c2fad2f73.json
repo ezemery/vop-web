@@ -1,0 +1,1 @@
+{"ast":null,"code":"var colors = {\n  transparent: 'transparent',\n  black: '#000000',\n  white: '#ffffff',\n  text: '#343D48',\n  textPrimary: '#0F2137',\n  primary: '#362C8B',\n  primaryHover: '#362C8B',\n  border: '#dce5ea',\n  secondary: '#7B72F0',\n  tertiary: '#5B2B9D'\n};\nexport default colors;","map":null,"metadata":{},"sourceType":"module"}

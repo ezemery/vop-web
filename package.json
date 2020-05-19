@@ -16,7 +16,7 @@
     "firebase-tools": "7.12.1",
     "husky": "^4.2.1",
     "lerna": "^3.20.2",
-    "lint-staged": "^10.0.3",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.1"
   },
@@ -27,6 +27,7 @@
     "packages/reusecore"
   ],
   "scripts": {
+    
     "clean": "lerna clean --yes && rimraf node_modules",
     "start": "lerna run --parallel dev",
     "preweb": "cpx \"packages/common/src/assets/image/**/*.*\" \"packages/landing/static\" -C",
@@ -54,12 +55,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged "
     }
   },
   "lint-staged": {
     "*.{js,md,css}": [
-      "prettier --trailing-comma es5 --single-quote --write",
+      "prettier --trailing-comma es5 --single-quote",
       "git add"
     ]
   },
